@@ -1060,7 +1060,7 @@ body {
 }
 
 .slider {
-  min-height: 426px;
+  min-height: 480px;
   margin: 60px 0px 0px 0px;
   min-width: 0;
   position: relative;
@@ -1069,7 +1069,7 @@ body {
 .slider .slick-arrow {
   position: absolute;
   z-index: 9;
-  bottom: -40px;
+  bottom: 30px;
   font-size: 0;
   cursor: pointer;
 }
@@ -1210,7 +1210,6 @@ body {
   min-height: 594px;
   padding: 20px 0px;
   position: relative;
-  overflow: hidden;
 }
 .contacts img {
   position: absolute;
@@ -1222,6 +1221,7 @@ body {
 }
 .contacts__block {
   width: 100%;
+  min-height: 360px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1233,6 +1233,9 @@ body {
   position: relative;
 }
 .contacts__block-descr {
+  max-width: 570px;
+  width: 100%;
+  min-height: 120px;
   color: #ffffff;
   text-decoration: none;
   font-style: normal;
@@ -1254,6 +1257,7 @@ body {
 }
 .contacts__form {
   max-width: 850px;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -1264,7 +1268,8 @@ body {
           justify-content: space-between;
 }
 .contacts__form input {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFFFFF;
@@ -1292,6 +1297,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   margin-top: 40px;
 }
@@ -1329,7 +1336,8 @@ body {
   display: block;
 }
 .contacts__form-check label .form__check-text {
-  width: 570px;
+  max-width: 570px;
+  width: 100%;
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;
@@ -1387,12 +1395,14 @@ body {
 
 .footer {
   background: #31363D;
-  height: 144px;
+  min-height: 144px;
 }
 .footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1485,6 +1495,12 @@ body {
   }
   .cases__row3 .inclusive {
     max-width: 460px;
+  }
+  .contacts__block-descr p {
+    font-size: 18px;
+  }
+  .contacts__block-descr {
+    max-width: 470px;
   }
 }
 @media (max-width: 1450px) {
@@ -1612,6 +1628,12 @@ body {
   }
   .cases__row3 .inclusive {
     max-width: 430px;
+  }
+  .contacts__block-descr {
+    max-width: 910px;
+  }
+  .contacts img {
+    opacity: 0.4;
   }
 }
 @media (max-width: 1380px) {
@@ -1773,6 +1795,16 @@ body {
   .slick-slide {
     max-width: 880px;
   }
+  .footer .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contacts__block-descr {
+    max-width: 470px;
+  }
+  .contacts__form input {
+    max-width: 100%;
+  }
 }
 @media (max-width: 900px) {
   .service__box-item {
@@ -1789,6 +1821,14 @@ body {
   }
   .slick-slide {
     max-width: 660px;
+  }
+  .contacts__form-check {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contacts__form-check submit {
+    margin-top: 30px;
   }
 }
 @media (max-width: 780px) {
@@ -1835,16 +1875,19 @@ body {
   }
   .agency__row {
     margin: 0px auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  }
+  .agency__row-item-number {
+    font-size: 30px;
+  }
+  .agency__row-item-text {
+    font-size: 18px;
   }
   .agency__row-border {
     display: none;
   }
   .agency__row-item {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     margin: auto;
   }
 }
@@ -1876,7 +1919,7 @@ body {
     padding: 20px 40px;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 660px) {
   .cases__row-item {
     max-width: 100%;
   }
@@ -1894,6 +1937,15 @@ body {
   }
   .cases .cases__row-item .chayka-decor {
     left: -300px;
+  }
+  .agency__row-item {
+    max-width: 120px;
+  }
+  .footer__text, .footer__politics, .footer__info {
+    margin: 20px auto;
+  }
+  .footer {
+    min-height: 204px;
   }
 }
 @media (max-width: 500px) {
@@ -1946,9 +1998,43 @@ body {
   .slider__item-text p {
     font-size: 16px;
   }
+  .agency__row-item-number {
+    font-size: 20px;
+  }
+  .agency__row-item-text {
+    font-size: 16px;
+  }
+  .agency__row-item {
+    max-width: 90px;
+    margin: 0px 10px 0px 0px;
+    padding: 40px 0px 10px 0px;
+  }
+  .service, .cases {
+    margin-top: 60px;
+  }
+  .slider .slick-prev, .slider .slick-next {
+    display: none;
+  }
 }
 @media (max-width: 400px) {
   .service__box-item-hidden-descr {
     font-size: 14px;
+  }
+  .main__screen .offer__title {
+    font-size: 30px;
+  }
+  .main__screen .offer__title::before {
+    top: 34px;
+    width: 277px;
+  }
+  .main__screen .offer__link p, .main__screen .offer .btn p {
+    font-size: 15px;
+  }
+  .footer__text {
+    font-size: 14px;
+    text-align: center;
+  }
+  .stages__box-item-title {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
